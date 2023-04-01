@@ -12,10 +12,10 @@ window.addEventListener('load', function () {
             this.width = width;
             this.height = height;
             this.player = new Player(this);
-            this.input - new InputHandler();
+            this.input = new InputHandler();
         }
         update() {
-            this.player.update();
+            this.player.update(this.input.keys);
         }
         draw(context) {
             this.player.draw(context);
@@ -28,8 +28,8 @@ window.addEventListener('load', function () {
 
     function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        game.update();
         game.draw(ctx);
+        game.update();
         requestAnimationFrame(animate);
     }
     animate();
