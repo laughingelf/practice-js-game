@@ -8,6 +8,7 @@ export class Player {
         this.image = document.getElementById('player');
     }
     update(input) {
+        //this.x++;
         //if (input.includes('ArrowRight')) this.x++;
         //else if (input.includes('ArrowLeft')) this.x--;
     }
